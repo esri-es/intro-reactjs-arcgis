@@ -49,12 +49,12 @@ export const Geojson = () => {
           {`})`};
           <br />
           var geojsonLayer = new <b>GeoJSONLayer</b>{`({`}<br/>
-            url: "https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/all_month.geojson",
+            url: "https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/all_month.geojson", 
             copyright: "USGS Earthquakes",
             popupTemplate: popupTemplate
           {`})`};
           <br />
-          map.add(geojsonLayer)
+          map.add(geojsonLayer);
           </code>
         </pre>
       </div>);

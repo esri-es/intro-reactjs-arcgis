@@ -1,7 +1,7 @@
 import React, { useEffect, useRef } from 'react';
 import { loadModules } from 'esri-loader';
 
-export const Koop = () => {
+export const KoopDGT = () => {
     const mapRef = useRef();
     useEffect(
       () => {
@@ -46,6 +46,7 @@ export const Koop = () => {
     return (
       <div>
         <h3> Mapa de cámaras de la DGT. Datos locales lanzados con <a href="https://koopjs.github.io/" target="_blank">KOOP</a> como servidor.</h3>
+        <p>No se mostrarán los puntos sino se ha montado el servidor en local.</p>
         <div className="webmap" ref={mapRef} />
         <br />
         <pre className="prettyprint lang-js code-section">

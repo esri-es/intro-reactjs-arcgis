@@ -11,20 +11,23 @@ export const SimpleMarker = () => {
             basemap: 'topo-vector'
           });
         
-          new MapView({
+          window.view = new MapView({
             container:  mapRef.current,
             map: map,
             center: [-3.704538, 40.416790],
             zoom: 15,
           });
     
-          var graphicsLayer = new GraphicsLayer();
+          var graphicsLayer = new GraphicsLayer({id : 1});
           map.add(graphicsLayer);
           
           var point = {
             type: "point",
             x: -3.704538,
-            y: 40.416790
+            y: 40.416790,
+            spatialReference: {
+              wkid: 4326
+            }
           };
           
           var pointGraphic = new Graphic({
